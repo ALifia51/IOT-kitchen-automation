@@ -1,0 +1,11 @@
+
+sitemap Grocery_Items label="Cooking Ingredients Status" {
+
+    Frame label="Grocery Items" {
+
+       Text item=w1 label="Ingredients1 Amount [%s g]" icon="batteryLevel" valuecolor=[Last_Update=="Uninitialized"="gray",>=60="green", >=30="yellow", <30="red"]
+        }
+    }
+
+
+

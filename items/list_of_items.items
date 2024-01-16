@@ -1,0 +1,12 @@
+Switch Lt "Light" {channel="mqtt:topic:C1:Lt"}
+Switch MDSw "Motion Detection enable/disable" {channel="mqtt:topic:C1:MDSw"}
+Switch ExFan "Exhaust Fan" {channel="mqtt:topic:C1:ExFan"}
+Switch GV "Gas Valve" {channel="mqtt:topic:C1:GV"}
+Number Temp "Kitchen Temperature" {channel="mqtt:topic:C1:Temp"}
+Number RH "Relative Humidity" {channel="mqtt:topic:C1:RH"}
+Number AP "Air Pressure" {channel="mqtt:topic:C1:AP"}
+Number eCO2 "eCO2" {channel="mqtt:topic:C1:eCO2"}
+Number TVOC "TVOC" {channel="mqtt:topic:C1:TVOC"}
+Number w1 "Item-1 Weight" {channel="mqtt:topic:C1:w1"}
+String MD "Motion Detection" {channel="mqtt:topic:C1:MD"}
+String GSD "Gas/Smoke Detection" {channel="mqtt:topic:C1:GSD"}

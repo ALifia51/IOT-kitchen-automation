@@ -1,0 +1,20 @@
+sitemap Kitchen_Monitoring label="Kitchen" {
+       Text item=DateItm label="Time:" icon="Time"
+    Frame label="Kitchen Monitoring" {
+      
+       Text item=Temp label="Temperature [%s °C ]" icon="temperature"
+       Text item=RH label="Humidity [%s %%]" icon="humidity"
+       Text item=AP label="Air pressure[%s]" icon="pressure"
+       Text item=eCO2 label="eCO2  [%s]" icon="carbondioxide"
+       Text item=TVOC label="TVOC[%s]" icon="temperature"
+       
+       Text item=GSD label="Gas/Smoke:" icon="Gas" 
+       Text item=MD label="Motion:" icon="motion"   
+        }
+    Frame label="Kitchen Switches" {
+       Switch item=ExFan icon="fan" 
+       Switch item=Lt icon="light"
+       Switch item=GV icon="Flow"
+       Switch label="Motion Detection enable/disable " item=MDSw 
+        }
+    }

@@ -1,0 +1,66 @@
+// //Rule ----1
+
+// rule "Send Mobile Push Notification for Fan"
+// when
+//     Item sw2 changed
+// then
+//     if(sw2.state == ON)
+//     {
+//         logInfo("notifications", "Sending notification via app.")
+//         sendNotification("alifiaafnan1@gmail.com", 
+//             "Fan has turned on...")
+
+//     }
+// end
+
+// //Rule---2
+
+// rule "Send Mobile Push Notification for Light"
+// when
+//     Item Lt changed
+// then
+//     if(Lt.state == ON)
+//     {
+//         logInfo("notifications", "Sending notification via app.")
+//         sendNotification("alifiaafnan1@gmail.com", 
+//             "light has turned on...")
+        
+//     }
+// end
+
+// //Rule---3
+
+
+rule "Send Mobile Push Notification for Motion Detection"
+when
+    Time cron "0/5 * * 1/1 * ? *" 
+then
+    if(MD.state =="Detected" && MDSw.state==ON)
+    {
+        logInfo("notifications", "Sending notification via app.")
+        sendNotification("alifiaafnan1@gmail.com", 
+            "Warning!..Motion Detected in the kitchen..")
+        
+    }
+
+end
+
+// //Rule---3
+
+
+rule "Send Mobile Push Notification for gas leakage"
+when
+    Time cron "0/3 * * 1/1 * ? *"
+then
+    if(GSD.state =="Detected")
+    {
+        logInfo("notifications", "Sending notification via app.")
+        sendNotification("alifiaafnan1@gmail.com", 
+            "Warning!..Gas leakage in the kitchen..")
+        
+    }
+
+end
+
+
+
